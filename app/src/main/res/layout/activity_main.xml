@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:onClick="thr"
             android:text="Hello World!"
             android:textSize="24dp"
             />
@@ -27,17 +28,6 @@
             android:gravity="bottom|right"
             android:text="this is footer"
             android:textSize="12dp" />
-
-        <TextView
-            android:id="@+id/thr"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:onClick="thr"
-            android:text="Thread!"
-            android:textSize="24dp"
-            />
 
     </RelativeLayout>
 

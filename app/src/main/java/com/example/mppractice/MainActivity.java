@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        path = getExternalFilesDir(null);
+        path = Environment.getExternalStorageDirectory();
+
         file = new File(path, "abc.txt");
         //tmr();
 //        try {
@@ -62,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
             Log.d("ioe",ioe.toString());
         }
         hdr = findViewById(R.id.hdr);
-        hdr.setOnTouchListener(new View.OnTouchListener(){
+        hdr.setText(path.toString());
+        /*hdr.setOnTouchListener(new View.OnTouchListener(){
             @Override
             public boolean onTouch(View v, MotionEvent event){
                 int x = (int)event.getX();
@@ -70,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 hdr.setText("X: " + x + ", Y: " + y);
                 return true;
             }
-        });
+        });*/
     }
 
     private void tmr(){
